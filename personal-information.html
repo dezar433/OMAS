@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OMAS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel=stylesheet>-->
+        <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel=stylesheet>
+        <link href="assets/css/style.css" type="text/css" rel=stylesheet>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700" rel="stylesheet">
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script>
+//            if (!localStorage.getItem('is_login')) {
+//                window.location = 'about-you.html';
+//            }
+        </script>
+    </head>
+    <body>
+
+        <div class="mobile-main signup">
+            <div class="vertical-middle">
+                <div class="top-bg">
+                    <div class="back-button col-md-9 col-sm-9 pull-left text-left"> 
+                        <a href="javascript:void(0);" onclick="window.history.back();">
+                            <span class="glyphicon glyphicon-menu-left"></span> BACK
+                        </a>
+                    </div>
+                    <div class="logo pull-right col-md-3 col-sm-3">
+                        <a href="index.html">
+                            <img src="assets/img/logo.jpg">
+                            <span class="slogn-line"> OMAS </span>
+                            <small> Health Care</small>
+                        </a>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="login-section personal-info">
+                        <p> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        <form role="form"> 
+                            <div class="info-div">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <div class="panel-title"><h3>Medical Record</h3></div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="form-group"> 
+                                                <div class="row">
+                                                    <input style="display:none;" id="selectFiles" type="file" multiple="multiple">
+                                                    <label class="btn btn-success " id="seleectButton" for="selectFiles">Upload</label>
+                                                </div>                                                 
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-div">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <div class="panel-title"><h3>GP Information</h3></div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="form-group"> 
+                                                <div class="row">
+                                                    <input style="display:none;" id="selectFiles" type="file" multiple="multiple">
+                                                    <label class="btn btn-warning " id="seleectButton" for="selectFiles">Upload</label>
+                                                </div>                                                 
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-div">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <div class="panel-title"><h3>Proof of ID</h3></div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="form-group"> 
+                                                <div class="row" id="">
+                                                    <input style="display:none;" id="selectFiles" type="file" multiple="multiple">
+                                                    <label class="btn btn-warning " id="seleectButton" for="selectFiles">Upload</label>
+                                                </div>                                                 
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="submit" type="submit" class="btn btn-default cancel">Submit</button>
+                            <button id="cancel" class="btn btn-default" onclick='window.location="login.html"; return false;'>Cancel</button>
+
+                        </form>
+                    </div><!-- about you end -->
+                </div>
+            </div><!-- mobile main end -->
+        </div>
+
+    </body>
+</html>

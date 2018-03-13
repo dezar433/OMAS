@@ -1,0 +1,175 @@
+body{ font-family: 'Roboto Condensed', sans-serif;}
+
+/* custom style */
+.mobile-main {  display: table;  height: 100vh; width: 100%; max-width: 640px;  margin: 0 auto; text-align: center;}
+.vertical-middle{ vertical-align: middle; display: table-cell;}
+.vertical-middle .logo img{ width: 100%; max-width: 120px;}
+.vertical-middle .logo span{ display: block; font-weight: 600; font-size: 22px; color:#0ea6cd;}
+.vertical-middle .logo small{ font-size: 14px; font-weight: 400; padding: 0; display: block; color: #145482;}
+
+
+/* about you section */
+.about-you{ border-top: 3px solid #e6e6e6; width: 100%; display: block; margin: 45px auto 0; text-align: center;}
+.about-you a{ font-size: 15px; display: block; border-radius: 30px; padding: 15px; max-width: 220px; width:100%; background: rgba(59,140,135,1);/* Old Browsers */
+background: -moz-linear-gradient(left, rgba(59,140,135,1) 0%, rgba(58,139,134,1) 25%, rgba(57,125,148,1) 52%, rgba(55,100,172,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(59,140,135,1)), color-stop(25%, rgba(58,139,134,1)), color-stop(52%, rgba(57,125,148,1)), color-stop(100%, rgba(55,100,172,1)));/* Chrome, Safari4+ */
+background: -webkit-linear-gradient(left, rgba(59,140,135,1) 0%, rgba(58,139,134,1) 25%, rgba(57,125,148,1) 52%, rgba(55,100,172,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left, rgba(59,140,135,1) 0%, rgba(58,139,134,1) 25%, rgba(57,125,148,1) 52%, rgba(55,100,172,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left, rgba(59,140,135,1) 0%, rgba(58,139,134,1) 25%, rgba(57,125,148,1) 52%, rgba(55,100,172,1) 100%); /* IE 10+ */
+background: linear-gradient(to right, rgba(59,140,135,1) 0%, rgba(58,139,134,1) 25%, rgba(57,125,148,1) 52%, rgba(55,100,172,1) 100%);/* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b8c87', endColorstr='#3764ac', GradientType=1 );/* IE6-9 */ color: #fff; margin: 25px auto 35px; font-weight: 600; transition: all background 0.5s ease;}
+.about-you a:focus{ text-decoration: none;}
+.about-you a:hover, .about-you a:focus, .login-section button{ text-decoration: none;
+background: rgba(55,100,172,1);/* Old Browsers */
+background: -moz-linear-gradient(left, rgba(55,100,172,1) 0%, rgba(55,100,172,1) 25%, rgba(55,114,158,1) 52%, rgba(55,139,133,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(55,100,172,1)), color-stop(25%, rgba(55,100,172,1)), color-stop(52%, rgba(55,114,158,1)), color-stop(100%, rgba(55,139,133,1)));/* Chrome, Safari4+ */
+background: -webkit-linear-gradient(left, rgba(55,100,172,1) 0%, rgba(55,100,172,1) 25%, rgba(55,114,158,1) 52%, rgba(55,139,133,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left, rgba(55,100,172,1) 0%, rgba(55,100,172,1) 25%, rgba(55,114,158,1) 52%, rgba(55,139,133,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left, rgba(55,100,172,1) 0%, rgba(55,100,172,1) 25%, rgba(55,114,158,1) 52%, rgba(55,139,133,1) 100%); /* IE 10+ */
+background: linear-gradient(to right, rgba(55,100,172,1) 0%, rgba(55,100,172,1) 25%, rgba(55,114,158,1) 52%, rgba(55,139,133,1) 100%);/* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3764ac', endColorstr='#378b85', GradientType=1 );/* IE6-9 */
+transition: all 0.5s ease;
+}
+
+
+/* login-section */
+.login-section{ margin: 35px auto 0;}
+.login-section input, .login-section select{ border: 2px solid #ebebeb; padding: 10px; box-shadow: 0 0 0; min-height: 52px; border-radius: 0px; font-weight: 500; width: 100%;}
+.login-section input:focus, .login-section input:active{ outline: none; color:#0ea6cd; font-weight: 600;}
+a.forgot-link{color: #0ea6cd; font-weight: 600;display: block;text-align: left; margin: 0 0 15px;font-size: 14px;}
+.login-section button{ border: 0px; padding: 8px 45px; color: #fff; font-weight: 600; transition: all 0.5s ease;}
+.login-section button:focus, .login-section button:hover, .login-section button:active, .info-div label{ border: 0px; outline: none; background:rgba(55,100,172,1);/* Old Browsers */
+background: -moz-linear-gradient(left, rgba(55,100,172,1) 0%, rgba(55,100,172,1) 25%, rgba(55,114,158,1) 52%, rgba(55,139,133,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(55,100,172,1)), color-stop(25%, rgba(55,100,172,1)), color-stop(52%, rgba(55,114,158,1)), color-stop(100%, rgba(55,139,133,1)));/* Chrome, Safari4+ */
+background: -webkit-linear-gradient(left, rgba(55,100,172,1) 0%, rgba(55,100,172,1) 25%, rgba(55,114,158,1) 52%, rgba(55,139,133,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left, rgba(55,100,172,1) 0%, rgba(55,100,172,1) 25%, rgba(55,114,158,1) 52%, rgba(55,139,133,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left, rgba(55,100,172,1) 0%, rgba(55,100,172,1) 25%, rgba(55,114,158,1) 52%, rgba(55,139,133,1) 100%); /* IE 10+ */
+background: linear-gradient(to right, rgba(55,100,172,1) 0%, rgba(55,100,172,1) 25%, rgba(55,114,158,1) 52%, rgba(55,139,133,1) 100%);/* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3764ac', endColorstr='#378b85', GradientType=1 );/* IE6-9 */ transition: all 0.5s ease; color: #fff;}
+
+.bottom-section{ position: fixed; bottom: 0; background: #f5f5f5; padding: 25px 15px; left: 0; width: 100%;}
+.bottom-section button.cancel{ background: #ccc; color: #3a3a3a;}
+.bottom-section button{ background: #0ea6cd;}
+.mobile-main.signup, .mobile-main.signup .vertical-middle{ display: block; width: 100%; float: left;}
+.top-bg{ background: #f5f5f5; width: 100%; padding: 0 10px; float: left; width: 100%; margin-bottom: 35px; color:#0ea6cd; font-weight: 600;}
+.top-bg .back-button span{font-size: 22px;  top: 5px;}
+.back-button { width: 65%; padding: 8px 0; margin: 10px 0; font-weight: normal;}
+.signup .logo {
+    width: 30%;
+    margin-bottom: 0;
+    background: #fff;
+    padding: 0;
+}
+.mobile-main.signup .vertical-middle .logo img {
+    width: 100%;
+    max-width: 60px;
+}
+.mobile-main.signup .vertical-middle .logo small{ font-size: 12px;}
+.mobile-main.signup .vertical-middle .logo span{ font-size: 16px;}
+    #uploadPanel {
+        box-shadow: 0 0 10px 2px rgba(144, 130, 130, 0.57);
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-top:40px;
+    }
+    
+    #selectButton{
+        margin-right:10px;
+    }
+    
+    #uploadButton{
+        display:inline-block;
+        margin-left:5px;
+        margin-right:5px;
+    }
+    
+    #fileprogress{
+        margin-top:3px;
+    }
+    .info-div h3 {
+        margin: 0px;
+        font-size: 16px;
+    }
+.info-div .form-group{ margin-bottom: 0px;}
+.info-div label{ border-radius: 35px; padding: 7px 30px;}
+.info-div .panel-info>.panel-heading {color: #555; background-color: #ccc; border-color: #f5f5f5;}
+.info-div .panel-info { border-color: #e5e5e5;}
+.login-section button#cancel{ background: #555;}
+span.error{ width: 100%; color: red; float: left; display: block; text-align: left; margin: 5px 0;}
+.mobile-main.signup .login-section {
+    margin: 35px auto 0;
+    height: 65vh;
+    float: left;
+    width: 100%;
+    overflow: scroll;
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #757575;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    left:-250px;
+}
+.avtar{ max-width: 120px; border-radius: 50%; margin: 0 0 20px;}
+span.name{ display: block; margin: 8px;  color:#f5f5f5 !important ;
+    font-size: 18px;}
+.sidenav button{ background: #ccc; color: #555; padding: 5px 25px; border: 0px; font-weight: 600; margin-top: 15px;}
+.sidenav a {
+    padding:8px 10px;
+    text-decoration: none;
+    color:#f5f5f5 !important ;
+    font-size: 16px;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+    border-bottom:2px solid #a2a2a2;
+}
+.sidenav a span{ padding: 0 8px 0 0px;}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    font-size: 36px;
+    margin-left: 50px;
+    border-bottom: 0;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px 0;
+}
+.top-slide-menu{
+    background: #212121;
+    float: left;
+    width: 100%;    
+    position: relative;
+    padding: 0px 20px;
+}
+.right-menu a {
+    color: #989898;
+    font-size: 16px;
+    padding: 14px 0;
+    display: inline-block;
+    text-decoration: none;
+}
+.main-banner img{ width: 100%; }
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+@media (max-width:340px){
+   .mobile-main.signup .login-section{ padding-bottom: 125px; height: 100vh; margin: 0px; overflow: auto;} 
+}

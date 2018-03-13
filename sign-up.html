@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OMAS</title>
+        <meta charset="UTF-8">
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="initial-scale=1, minimal-ui" />
+        <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel=stylesheet>
+        <link href="assets/css/style.css" type="text/css" rel=stylesheet>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700" rel="stylesheet">
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <div class="mobile-main signup">
+            <div class="vertical-middle">
+                <div class="top-bg">
+                    <div class="back-button col-md-9 col-sm-9 pull-left text-left"> 
+                        <a href="javascript:void(0);" onclick="window.history.back();">
+                            <span class="glyphicon glyphicon-menu-left"></span> BACK
+                        </a>
+                    </div>
+                    <div class="logo pull-right col-md-3 col-sm-3">
+                        <a href="index.html">
+                            <img src="assets/img/logo.jpg">
+                            <span class="slogn-line"> OMAS </span>
+                            <small> Health Care</small>
+                        </a>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="login-section">
+                        <form name="sign_up_form" method='POST' id='sign_up_form' action='personal-information.html'>
+                            <div class="form-group">                                   
+                                <input type="text" class="form-control" id="first_name" placeholder="First Name">
+                            </div>                            
+                            <div class="form-group">                                   
+                                <input type="text" class="form-control" id="last_name" placeholder="Last Name">
+                            </div>
+                            <div class="form-group">                                   
+                                <input type="email" class="form-control" id="email" placeholder="Email">
+                            </div>                                
+                            <div class="form-group">                                    
+                                <input type="password" class="form-control" id="pwd" placeholder="password">
+                            </div>
+                            <div class="form-group">                                    
+                                <input type="text" class="form-control" id="number" placeholder="Number">
+                            </div>
+
+                            <div class="form-group" >
+                                <select id='select_country' disabled='disabled' name='country'>
+                                    <option value='uk'>United Kingdom</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-default">Register</button>
+                            </div>
+                        </form>
+
+                        <div class="bottom-section">
+                            <button class="btn btn-default cancel" onclick="window.location = 'about-you.html';">Cancel</button>
+                            <button class="btn btn-default" onclick="window.location = 'login.html';">Login</button>
+                        </div>
+                    </div><!-- about you end -->
+                </div>
+            </div><!-- mobile main end -->
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('#sign_up_form').submit(function () {
+                    var error = false;
+                    $(this).find('.error').remove();
+                    $(this).find('input').each(function () {
+                        if ($(this).val() == "") {
+                            error = true;
+                            $(this).after($("<span>", {
+                                text: 'This field is required.',
+                                class: 'error'
+                            }));
+                        }
+                    });
+//                    if ($('#select_country').val() == "") {
+//                        error = true;
+//                        $('#select_country').after($("<span>", {
+//                            text: 'This field is required.',
+//                            class: 'error'
+//                        }));
+//                    }
+                    if (error) {
+                        return false;
+                    }
+                    localStorage.setItem('is_login', true);
+//                    window.location = ';
+                });
+            });
+        </script>
+    </body>
+</html>

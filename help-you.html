@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OMAS</title>
+        <meta charset="UTF-8">
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="initial-scale=1, minimal-ui" />
+        <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel=stylesheet>
+        <link href="assets/css/style.css" type="text/css" rel=stylesheet>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700" rel="stylesheet">
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script>
+//            if (!localStorage.getItem('is_login')) {
+//                window.location = 'about-you.html';
+//            }
+        </script>
+    </head>
+    <body>
+        <style>
+            li.menu-item {
+                display: inline;
+                width: 30%;
+                float: left;
+                color: #fff;
+                padding: 15px;
+            }
+            .main-menu {
+                /*padding: 10px;*/
+                /*border: 1px solid black;*/
+                background: #000;
+            }
+            *{
+                color:#ffffff;
+            }
+            li.active span{
+                color:#0ea6cd;
+            }
+            .login-section.help-page{
+                margin-top: 0;
+            }
+            .help-page .info-div .panel-info>.panel-heading{
+                background: #fff;
+                color: #000;
+            }
+        </style>
+        <div class="mobile-main toggle-main">
+            <div class="top-slide-menu">
+                <div class="pull-left"><span style="font-size: 22px; cursor: pointer; padding: 8px 0; display: inline-block;" onclick="openNav()">
+                        &#9776; <span style="color:#0ea6cd;">OMAS</span>
+                    </span>
+                </div>
+                <div id="mySidenav" class="sidenav pull-left">
+                    <img src="assets/img/default-avatar.png" class="avtar" height='80'>
+                    <span class='name'> UA </span>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                        <span class="glyphicon glyphicon-remove" style="font-size: 20px; font-weight: normal;"></span>
+                    </a>
+                    <a href="#"><span class="glyphicon glyphicon-home"></span></span>Home</a>
+                    <a href="#"><span class="glyphicon glyphicon-phone"></span>Book an appointment</a>
+                    <a href="#"><span class="glyphicon glyphicon-text-color"></span>Store</a>
+                    <a href="#"><span class="glyphicon glyphicon-pushpin"></span>Profile</a>
+                    <a href="#"><span class="glyphicon glyphicon-pushpin"></span>Sick Notes</a>
+                    <a href="#"><span class="glyphicon glyphicon-pushpin"></span>Favourite Doctor</a>
+                    <a href="#"><span class="glyphicon glyphicon-pushpin"></span>Setting</a>
+                    <a href="#"><span class="glyphicon glyphicon-pushpin"></span>Help</a>
+                    <button style='margin-bottom:30px;' onclick="window.location='login.html';"> Logout</button>
+                </div>
+                <div class="pull-right right-menu">
+                    <a href='#' style="color:#ffffff;" onclick="window.location='login.html';"><span class="glyphicon glyphicon-log-out"></span></a>
+                </div>
+            </div>
+
+            <div id="main">
+                <div class="main-banner">
+                    <img src="assets/img/banner.jpg" alt="banner" height="190">
+                </div>       
+                <div class="main-menu">
+                    <ul style="overflow: hidden; white-space: nowrap; margin: 0;">
+                         <li class="menu-item active" onclick="window.location='help-you.html'"><span class="glyphicon glyphicon-calendar"></span></li>
+                        <li class="menu-item" onclick="window.location='reminder.html'"><span class="glyphicon glyphicon-bell"></span></li>
+                        <li class="menu-item"><span class="glyphicon glyphicon-user"></span></li>
+                    </ul>
+                </div>
+                <div class="login-section help-page">
+                    <form role="form" name="forgot_password" action="send-password.html" id='forgot_password'> 
+                        <div class="info-div">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <div class="panel-title"><h3>Hello, How can I help you?</h3></div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-group"> 
+                                        <input type="text" class='help_me' placeholder="e.g. I have a headache.">
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div><!-- mobile main end -->
+
+
+        <script>
+            $(document).ready(function () {
+                $('.main-menu .menu-item').click(function () {
+                    $('.main-menu .menu-item.active').removeClass('active');
+                    $(this).addClass('active');
+                });
+            });
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("mySidenav").style.left = "0px";
+                document.getElementById("main").style.marginLeft = "0";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0px";
+            }
+        </script>
+    </body>
+</html>

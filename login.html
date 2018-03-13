@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OMAS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel=stylesheet>
+        <link href="assets/css/style.css" type="text/css" rel=stylesheet>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700" rel="stylesheet">
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="mobile-main">
+                <div class="vertical-middle">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/img/logo.jpg">
+                            <span class="slogn-line"> OMAS </span>
+                            <small> Health Care</small>
+                        </a>
+                    </div>
+                    <div class="login-section">
+                        <form action="help-you.html" name="login_form" id='login_form' method="POST" >
+                            <div class="form-group">                                   
+                                <input type="text" name="username" class="form-control username" id="username" placeholder="Username">
+                            </div>
+                            <div class="form-group">                                    
+                                <input type="password" name="password" class="form-control password" id="password" placeholder="password">
+                            </div>
+                            <div class="form-group">
+                                <a href="forgot-password.html" class="forgot-link"> Forgot Password ?</a>
+                                <button type="submit" class="btn btn-default">Login</button>
+                                <p style="margin-top: 10px;"> OR </p>
+                                <p><a href="login-with-touch.html">Login with touchID </a></p>
+                            </div>
+                        </form>
+
+                        <div class="bottom-section">
+                            <button type="submit" class="btn btn-default cancel" onclick="window.location = 'about-you.html';">Cancel</button>
+                            <button type="submit" class="btn btn-default" onclick="window.location = 'sign-up.html';">Sign up</button>
+                        </div>
+                    </div><!-- about you end -->
+                </div>
+            </div><!-- mobile main end -->
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('#login_form').submit(function () {
+                    $('#login_form .error').remove();
+                    var username = $('#login_form .username').val();
+                    var password = $('#login_form .password').val();
+                    if (username.trim() == '' || password.trim() == '') {
+                        if (username.trim() == '') {
+                            $('#login_form .username').after($('<span>', {
+                                'class': 'error pull-left',
+                                'text': 'User name is required.'
+                            }));
+                        }
+                        if (password.trim() == "") {
+                            $('#login_form .password').after($('<span>', {
+                                class: 'error pull-left',
+                                text: 'Password is required.'
+                            }));
+                        }
+                        return false;
+                    }
+                    if ((username == 'doctor' || username == 'doctor@omas.com') && password == '12345678') {
+                        localStorage.setItem('is_login', true);
+                    } else {
+                        $("#login_form").prepend($('<span>', {
+                            class: 'error text-center',
+                            text: 'Invalid username or password. Use UN:doctor@omas.com, PW:12345678'
+                        }));
+                        return false;
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
